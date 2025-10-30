@@ -14,10 +14,11 @@ architecture tb of alu_tb is
     -- Base de tiempo
     constant periodo : time := 10 ns;
     -- Ancho de palabra
-    constant W : integer := 32;
+    constant W : integer := 8;
 
-    signal A,B,Y : std_logic_vector(W-1 downto 0);
+    signal A,B: std_logic_vector(W-1 downto 0);
     signal sel_fn : std_logic_vector (3 downto 0);
+    signal Y : std_logic_vector(W-1 downto 0);
     signal Z : std_logic;
 begin
 
